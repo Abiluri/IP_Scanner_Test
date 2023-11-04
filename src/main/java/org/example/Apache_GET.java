@@ -14,11 +14,13 @@ public class Apache_GET {
 
     public static void main(String[] args) throws IOException {
 
-        HttpGet request = new HttpGet("https://www.google.com/");
+        HttpGet request = new HttpGet("http://krochak.ddns.net:8080/");
 
         // add request headers
         request.addHeader("custom-key", "mkyong");
         request.addHeader(HttpHeaders.USER_AGENT, "Googlebot");
+
+
 
         try (CloseableHttpClient httpClient = HttpClients.createDefault();
              CloseableHttpResponse response = httpClient.execute(request)) {
@@ -33,7 +35,7 @@ public class Apache_GET {
             if (entity != null) {
                 // return it as a String
                 String result = EntityUtils.toString(entity);
-                // System.out.println(result); // Front-end
+                System.out.println(result); // Front-end
             }
 
         }
