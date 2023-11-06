@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args) {
         startTime = new Date();
 
-        processArgs(new String[]{"176.195.32.169"});
+        processArgs(new String[]{"8.8.8.8"});
 
         if (allPorts.size()/MIN_PORTS_PER_THREAD > MAX_THREADS ) {
             final int PORTS_PER_THREAD = allPorts.size()/MAX_THREADS;

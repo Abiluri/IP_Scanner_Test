@@ -66,6 +66,9 @@ public class HttpClientGetServerCertificate {
                 System.out.println("SubjectDN Principal: " + real.getSubjectX500Principal());
                 System.out.println("Not After: " + DateUtils.formatDate(real.getNotAfter(), "dd-MM-yyyy"));
                 System.out.println("Not Before: " + DateUtils.formatDate(real.getNotBefore(), "dd-MM-yyyy"));
+                GetDomainName getDomainName = new GetDomainName();
+                System.out.println("+-+-+-+-++-+");
+                getDomainName.nameToTxt(real);
             }
 
         } finally {
