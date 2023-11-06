@@ -9,6 +9,11 @@ import java.util.List;
 import java.util.concurrent.CyclicBarrier;
 
 public class Main {
+    /*
+    Uses PortScanWorker to scan for open ports.
+    Need to figure out how to get certificate from said ports to run TODO
+    HttpClientGetServerCertificate, getting certificate for GetDomainName
+    */
 
     public static final int MIN_PORTS_PER_THREAD = 20;
     public static final int MAX_THREADS = 0xFF;

@@ -2,7 +2,6 @@ package org.example;
 
 import org.apache.http.HttpResponseInterceptor;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.utils.DateUtils;
 import org.apache.http.conn.ManagedHttpClientConnection;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -59,15 +58,15 @@ public class HttpClientGetServerCertificate {
             // loop over certificates and print meta-data
             for (Certificate certificate : peerCertificates){
                 X509Certificate real = (X509Certificate) certificate;
-                System.out.println("----------------------------------------");
+                /*System.out.println("----------------------------------------");
                 System.out.println("Type: " + real.getType());
                 System.out.println("Signing Algorithm: " + real.getSigAlgName());
                 System.out.println("IssuerDN Principal: " + real.getIssuerX500Principal());
                 System.out.println("SubjectDN Principal: " + real.getSubjectX500Principal());
                 System.out.println("Not After: " + DateUtils.formatDate(real.getNotAfter(), "dd-MM-yyyy"));
-                System.out.println("Not Before: " + DateUtils.formatDate(real.getNotBefore(), "dd-MM-yyyy"));
+                System.out.println("Not Before: " + DateUtils.formatDate(real.getNotBefore(), "dd-MM-yyyy"));*/
                 GetDomainName getDomainName = new GetDomainName();
-                System.out.println("+-+-+-+-++-+");
+                //System.out.println("+-+-+-+-++-+");
                 getDomainName.nameToTxt(real);
             }
 
